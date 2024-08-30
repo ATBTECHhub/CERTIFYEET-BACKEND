@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon app.js",
-    "build:js": "parcel build ./public/js/index.js --out-dir ./public/js --out-file bundle.js --public-url ."
+    "build": "parcel build ./public/js/index.js --out-dir ./public/js --out-file bundle.js --public-url ."
   },
   "keywords": [],
   "author": "",
