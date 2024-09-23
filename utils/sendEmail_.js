@@ -13,7 +13,7 @@ const sendEmail = async (options) => {
     },
   });
 
-  // 2) Define the email options
+  // Define the email options
   const mailOptions = {
     from: "Certifyeet <noreply@certifyeet.com>",
     to: options.email,
@@ -22,7 +22,7 @@ const sendEmail = async (options) => {
     html: `<div class="">${options.message}</div>`,
   };
 
-  // 3) Actually send the email
+  // Actually send the email
   await transporter.sendMail(mailOptions);
 };
 
