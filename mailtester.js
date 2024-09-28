@@ -5,9 +5,10 @@ const path = require("path");
 const transporter = nodemailer.createTransport({
     service: "gmail",
     host: "smtp.gmail.com",
-    secure: false, // Use `true` for port 465, `false` for all other ports
+    port: 465,
+    secure: true, // Use `true` for port 465, `false` for all other ports
     auth: {
-      user: process.env.EMAIL,
+      user: process.env.EMAIL_USERNAME,
       pass: process.env.EMAIL_PASSWORD,
     },
 });
@@ -15,7 +16,7 @@ const transporter = nodemailer.createTransport({
 const mailOptions = {
     from: {
         name: "Certifiyeet",
-        address: process.env.EMAIL,
+        address: process.env.EMAIL_USERNAME,
     },
     to: 'hakeemabdullah87@gmail.com',
     subject: 'Testing email with attachment',
